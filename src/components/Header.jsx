@@ -1,19 +1,21 @@
 import React from 'react'
-
+import { NavLink, Link } from 'react-router-dom'
 function Header() {
   return (
     <>
         <header class="navbar-section">
             <div class="container">
                 <div class="logo">
-                    <a href="index.html"><img src="images/DevsCode (1).png" alt="sumitdevs logo"/></a>
+                    <Link to="/">
+                        <img src="images/DevsCode (1).png" alt="sumitdevs logo"/>
+                    </Link>
                 </div>
                 <div class="navbar">
                     <ul>
-                        <li class="navitem"><a href="index.html">Home</a></li>
-                        <li class="navitem"><a href="work.html">Work</a></li>
-                        <li class="navitem"><a href="blog.html">Blog</a></li>
-                        <li class="navitem"><a href="contact.html">Contact</a></li>
+                        <li class="navitem"><NavLink to="/">Home</NavLink></li>
+                        <li class="navitem"><NavLink to="work">Work</NavLink></li>
+                        <li class="navitem"><NavLink to="blog">Blog</NavLink></li>
+                        <li class="navitem"><NavLink to="contact">Contact</NavLink></li>
                     </ul>
                 </div>
             </div>
